@@ -8,6 +8,12 @@ function esVocal(letra) {
   // "n" ---> "Dato incorrecto"
   // "texto largo" ---> "Dato incorrecto"
   // Tu código:
+  letra = letra.toLowerCase();
+  if (letra.length !== 1) {
+    return "Dato incorrecto";
+  }
+  const vocales = new Set(['a', 'e', 'i', 'o', 'u']);
+  return vocales.has(letra) ? "Es vocal" : "Dato incorrecto";
 }
 
 module.exports = esVocal;
